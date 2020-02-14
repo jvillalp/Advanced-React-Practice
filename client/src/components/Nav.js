@@ -1,11 +1,11 @@
 import React from "react";
-import { useDarkMode } from "../hooks/useDarkMode";
+import { useDarkMode } from "../hooks/useDarkMode.js";
 
 const Nav = () => {
   const [darkMode, setDarkMode] = useDarkMode("Dark Mode", false);
   //toggle
-    const toggleBtn =event => {
-        event.preventDafault();
+    const toggleBtn = e => {
+        e.preventDefault();
         setDarkMode(!darkMode);
     };
   const lightMoon = (
